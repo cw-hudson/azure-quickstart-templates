@@ -145,8 +145,8 @@
   "variables": {
     "_comment0": "/* T-shirt sizes may vary for different reasons, and some customers may want to modify these - so feel free to go ahead and define your favorite t-shirts */",
     "tshirtSizeXSmall": {
-      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '1')]",
-      "vmSizeArbiter": "[concat('Standard_', parameters('vmSeries'), '1')]",
+      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '8s_v3')]",
+      "vmSizeArbiter": "[concat('Standard_', 'B1ms')]",
       "numberOfMembers": 1,
       "totalMemberCount": 2,
       "arbiter": "Enabled",
@@ -155,8 +155,8 @@
       "dataDiskSize": 128
     },
     "tshirtSizeSmall": {
-      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '1')]",
-      "vmSizeArbiter": "[concat('Standard_', parameters('vmSeries'), '1')]",
+      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '8s_v3')]",
+      "vmSizeArbiter": "[concat('Standard_', 'B1ms')]",
       "numberOfMembers": 2,
       "totalMemberCount": 3,
       "arbiter": "Disabled",
@@ -165,8 +165,8 @@
       "dataDiskSize": 128
     },
     "tshirtSizeMedium": {
-      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '2')]",
-      "vmSizeArbiter": "[concat('Standard_', parameters('vmSeries'), '1')]",
+      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '8s_v3')]",
+      "vmSizeArbiter": "[concat('Standard_', 'B1ms')]",
       "numberOfMembers": 3,
       "totalMemberCount": 4,
       "arbiter": "Enabled",
@@ -175,8 +175,8 @@
       "dataDiskSize": 256
     },
     "tshirtSizeLarge": {
-      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '2')]",
-      "vmSizeArbiter": "[concat('Standard_', parameters('vmSeries'), '1')]",
+      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '8s_v3')]",
+      "vmSizeArbiter": "[concat('Standard_', 'B1ms')]",
       "numberOfMembers": 7,
       "totalMemberCount": 8,
       "arbiter": "Enabled",
@@ -185,8 +185,8 @@
       "dataDiskSize": 256
     },
     "tshirtSizeXLarge": {
-      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '3')]",
-      "vmSizeArbiter": "[concat('Standard_', parameters('vmSeries'), '1')]",
+      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '8s_v3')]",
+      "vmSizeArbiter": "[concat('Standard_', 'B1ms')]",
       "numberOfMembers": 7,
       "totalMemberCount": 8,
       "arbiter": "Enabled",
@@ -195,8 +195,8 @@
       "dataDiskSize": 512
     },
     "tshirtSizeXXLarge": {
-      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '3')]",
-      "vmSizeArbiter": "[concat('Standard_', parameters('vmSeries'), '1')]",
+      "vmSizeMember": "[concat('Standard_', parameters('vmSeries'), '8s_v3')]",
+      "vmSizeArbiter": "[concat('Standard_', 'B1ms')]",
       "numberOfMembers": 15,
       "totalMemberCount": 16,
       "arbiter": "Disabled",
@@ -211,12 +211,12 @@
       "installerVersion": "4.0.2",
       "imagePublisher": "Canonical",
       "imageOffer": "UbuntuServer",
-      "imageSKU": "14.04.5-LTS"
+      "imageSKU": "16.04-LTS"
     },
     "vmStorageAccountContainerName": "vhd-mongodb",
     "vmStorageAccountDomain": ".blob.core.windows.net",
-    "sharedScriptUrl": "[concat('https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/shared_scripts/', variables('osFamilySpec').osName, '/')]",
-    "scriptUrl": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/mongodb-high-availability/",
+    "sharedScriptUrl": "[concat('https://raw.githubusercontent.com/cw-hudson/azure-quickstart-templates/master/shared_scripts/', variables('osFamilySpec').osName, '/')]",
+    "scriptUrl": "https://raw.githubusercontent.com/cw-hudson/azure-quickstart-templates/master/mongodb-high-availability/",
     "templateBaseUrl": "[variables('scriptUrl')]",
     "jumpboxTemplateEnabled": "jumpbox-resources.json",
     "jumpboxTemplateDisabled": "empty-resources.json",
